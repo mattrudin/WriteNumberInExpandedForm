@@ -7,15 +7,14 @@ function expandedForm(num) {
     
     for (let i = 0; i < arrLength; i++) {
       if (arr[i] != 0) {
-      result.push[i];
+      result.push(arr[i]);
       };
     }
-  // 3. return string mit folgenden ${values}:
-    // 3.1. if (arr[arrLength-1] != 0) {Zahl anzeigen};
-    // 3.2. if (arr[arrLength-2] != 0) {zweitletzte Zahl * 10};
-    // 3.3. etc...
-    console.log(result);
-    //return result //.join(' + ');
+  // erste Zahl braucht Länge - 1 Nullen
+  // zweite Zahl braucht Länge - 2 Nullen
+  // etc...
+    console.log(result.join(' + '));
+    //return
 }
 
 
