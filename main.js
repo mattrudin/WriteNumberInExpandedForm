@@ -5,23 +5,27 @@ function expandedForm(num) {
     console.log(arr);
     const arrLength = arr.length;
     const result = [];
+    const arrInv = [];
     
+    //Inverting the array
+    for (let j = 0; j < arrLength; j++) {
+    	arrInv.unshift(arr[j]);
+    }
+    console.log(arrInv);
+
+    //i times 10 to the power of i
     for (let i = 0; i < arrLength; i++) {
-      if (arr[i] != 0) {
-      result.push(arr[i]);
+      if (arrInv[i] != 0) {
+      result.unshift(arrInv[i] * Math.pow(10, i) );
       };
     }
-  // erste Zahl braucht Länge - 1 Nullen
-  // zweite Zahl braucht Länge - 2 Nullen
-  // etc...
     console.log(result.join(' + '));
-    //return
 }
 
 
 //Tests
 expandedForm(700);
-expandedForm(1234);
+expandedForm(1204);
 
 
 //Toughts
